@@ -1,4 +1,6 @@
-import smtplib, os, ssl
+import os
+import smtplib
+import ssl
 
 
 def send_email(message):
@@ -11,4 +13,3 @@ def send_email(message):
     with smtplib.SMTP_SSL(host, port, context=context) as smtp:
         smtp.login(username, password)
         smtp.sendmail(username, username, message)
-
